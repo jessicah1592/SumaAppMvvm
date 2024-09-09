@@ -1,0 +1,26 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SumaAppMvvm.MainPage">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Entry x:Name="EntryValor1"
+               Placeholder="Ingrese el primer valor"
+               Keyboard="Numeric"
+               Text="{Binding Valor1, Mode=TwoWay}" />
+
+        <Entry x:Name="EntryValor2"
+               Placeholder="Ingrese el segundo valor"
+               Keyboard="Numeric"
+               Text="{Binding Valor2, Mode=TwoWay}" />
+
+        <Label Text="{Binding Resultado}" FontSize="Large" />
+
+        <Button Text="Sumar"
+                Command="{Binding SumarCommand}" />
+
+        <Button Text="Limpiar"
+                Command="{Binding LimpiarCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
+
